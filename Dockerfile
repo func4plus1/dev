@@ -24,6 +24,6 @@ COPY plug.vim ${WORKSPACE}/.vim/autoload/plug.vim
 
 RUN vim +PlugInstall +qall 
 
-RUN curl https://sh.rustup.rs -y -sSf  | sh  && source $HOME/.cargo/env
+RUN curl https://sh.rustup.rs -sSf  | sh -s -- -y 
 
 CMD ["zsh"]
